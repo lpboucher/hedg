@@ -1,9 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { Button } from "react-bootstrap";
-import useSmoothScrollTo from "hooks/useSmoothScrollTo";
-import ImageCard from "components/ImageCard";
+import Jumbotron from "components/Jumbotron";
+import ScrollToButton from "components/ScrollToButton";
 
 const Top = ({ frontmatter }) => {
   if (!frontmatter) {
@@ -11,20 +10,16 @@ const Top = ({ frontmatter }) => {
   }
 
   const { header, subheader, imageFileName, jumpToAnchor, jumpToAnchorText } = frontmatter;
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const scrollToSection = useSmoothScrollTo(jumpToAnchor);
 
   let extraInfoPart;
   if (jumpToAnchor && jumpToAnchorText) {
     extraInfoPart = (
-      <Button size="xl" variant="primary" className="text-uppercase" onClick={scrollToSection}>
-        {jumpToAnchorText}
-      </Button>
+      <ScrollToButton size="xl" jumpToAnchor={jumpToAnchor} jumpToAnchorText={jumpToAnchorText} color="success" />
     );
   }
 
   return (
-    <ImageCard
+    <Jumbotron
       imageFileName={imageFileName}
       header={header}
       subheader={subheader}

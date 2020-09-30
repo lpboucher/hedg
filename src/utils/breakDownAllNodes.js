@@ -18,9 +18,11 @@ export default function breakDownAllNodes(nodes) {
 
   // sections part
   const sectionsNodes = nodes.filter(filterByDirectoryName(/sections/i));
+  console.log(sectionsNodes);
 
   // anchors for NavBar
   const anchors = sectionsNodes.map(path(["frontmatter", "anchor"])).filter(identity);
+  console.log(anchors);
 
   return {
     topNode,

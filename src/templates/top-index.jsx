@@ -8,6 +8,7 @@ import Footer from "views/Footer";
 import * as Sections from "views/Sections";
 import SEO from "components/SEO";
 import LanguageSelector from "components/LanguageSelector";
+import ScrollToButton from "components/ScrollToButton";
 
 import "utils/fixFontAwesome";
 import breakDownAllNodes from "utils/breakDownAllNodes";
@@ -69,6 +70,10 @@ export const query = graphql`
             medium
             twitter
           }
+          steps {
+            title
+            content
+          }
           subheader
           teamMember {
             header
@@ -116,7 +121,11 @@ const IndexPage = ({ data, pathContext: { langKey, defaultLang, langTextMap } })
   let langSelectorPart;
   if (langTextMap != null && Object.keys(langTextMap).length > 1) {
     langSelectorPart = (
-      <LanguageSelector langKey={langKey} defaultLang={defaultLang} langTextMap={langTextMap} />
+      <>
+        <LanguageSelector langKey={langKey} defaultLang={defaultLang} langTextMap={langTextMap} />
+        <ScrollToButton jumpToAnchor="Services" jumpToAnchorText="Refer Us" color="primary" />
+        <ScrollToButton jumpToAnchor="Services" jumpToAnchorText="Book an appointment" color="success" />
+      </>
     );
   }
 

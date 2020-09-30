@@ -1,21 +1,18 @@
 module.exports = {
-  title: "Gatsyby Startbootstrap Agency",
+  title: "Hedg Financial",
   keywords: [
-    "gatsby",
-    "gatsbyjs",
-    "landing page",
-    "landing",
-    "i18n",
-    "eslint",
-    "bootstrap",
-    "startbootstrap-agency",
+    "mortgage",
+    "insurance",
+    "mortgage insurance"
   ],
-  description: "gatsby version of startbootstrap-agency with i18n support.",
-  author: "thundermiracle",
+  description: "Landing page site of Hedg Financial",
+  author: "LB Technologies",
+  // this is the google analytics tracking id
   trackingId: "UA-119418003-5",
   defaultLang: "en",
   langTextMap: {
     en: "English",
     ja: "日本語",
+    fr: "Francais",
   },
 };

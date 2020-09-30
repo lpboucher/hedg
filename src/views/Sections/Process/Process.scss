@@ -1,0 +1,23 @@
+// Styling for the timeline section
+.process {
+  position: relative;
+  padding: 0;
+  list-style: none;
+  &:before {
+    position: absolute;
+    top: 15%;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    content: "";
+    background-color: $gray-200;
+    z-index: -1;
+  }
+}
+@media (min-width: 768px) {
+  .timeline {
+    &:before {
+      left: 50%;
+    }
+  }
+}
