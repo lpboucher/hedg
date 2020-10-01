@@ -18,7 +18,7 @@ const Process = ({ className, frontmatter }) => {
       <Row>
         <Col className="text-center">
           <SectionHeader header={rootHeader} subheader={rootSubHeader} />
-          <Button size="xl" variant="warning">test</Button>
+          <Button size="xl" variant="warning" className="btn-rounded">Ask your questions</Button>
         </Col>
       </Row>
     </PageSection>

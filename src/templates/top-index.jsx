@@ -90,6 +90,9 @@ export const query = graphql`
           telephone
           termsHref
           termsText
+          testimonials {
+            content
+          }
           title
           timeline {
             content

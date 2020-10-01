@@ -6,3 +6,5 @@ export { default as Team } from "./Team";
 export { default as Clients } from "./Clients";
 export { default as Process } from "./Process";
 export { default as Questions } from "./Questions";
+export { default as Case } from "./Case";
+export { default as Testimonials } from "./Testimonials";

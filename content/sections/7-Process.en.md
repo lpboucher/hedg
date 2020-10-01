@@ -5,15 +5,15 @@ subheader: ""
 steps: [
   {
     title: "Step 1",
-    content: "The first step is to...",
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     title: "Step 2",
-    content: "The second step is to...",
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     title: "Step 3",
-    content: "The third step is to...",
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
 ]
 ---
