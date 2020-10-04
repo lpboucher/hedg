@@ -3,11 +3,14 @@
   font-weight: 400;
   padding: 0.75em 0;
   letter-spacing: 1px;
-  color: white !important;
+  color: $primary !important;
   @include heading-font;
-  &.active,
+  &.active {
+    color: $success !important;
+  }
+
   &:hover {
-    color: $primary !important;
+    color: $secondary !important;
   }
 }
 @media (min-width: 992px) {

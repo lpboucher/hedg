@@ -8,12 +8,13 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import useWindowOnScroll from "hooks/useWindowOnScroll";
 import useSmoothScrollTo from "hooks/useSmoothScrollTo";
 import Icon from "components/Icon";
+import Image from "components/Image";
 import NavItem from "components/NavItem";
 
 import "./Navbar.scss";
 
 const MyNavbar = ({ anchors, frontmatter, extraItems }) => {
-  const { brand, menuText } = frontmatter;
+  const { brandLogo, brandName, menuText } = frontmatter;
 
   const handleScrollToTop = useSmoothScrollTo(0);
 
@@ -45,7 +46,7 @@ const MyNavbar = ({ anchors, frontmatter, extraItems }) => {
     >
       <Container>
         <Navbar.Brand className="cursor-pointer" onClick={handleBrandClick}>
-          {brand}
+          <Image className={clsx("p-0 logo-root", { "logo-shrink": shrink })} fileName={brandLogo} alt={brandName} />
         </Navbar.Brand>
         <Navbar.Toggle onClick={toggleMenu} aria-label="Toggle navigation">
           {menuText}
@@ -53,8 +54,8 @@ const MyNavbar = ({ anchors, frontmatter, extraItems }) => {
         </Navbar.Toggle>
         <Navbar.Collapse>
           <Nav className="text-uppercase ml-auto">
-            {anchors.map((anchor) => (
-              <NavItem key={anchor} to={anchor} onClick={closeMenu} />
+            {anchors.map(({ anchor, id }) => (
+              <NavItem key={id} to={id} onClick={closeMenu}>{anchor}</NavItem>
             ))}
           </Nav>
           {extraItems}

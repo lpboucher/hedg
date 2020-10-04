@@ -18,11 +18,12 @@ export default function breakDownAllNodes(nodes) {
 
   // sections part
   const sectionsNodes = nodes.filter(filterByDirectoryName(/sections/i));
-  console.log(sectionsNodes);
 
   // anchors for NavBar
   const anchors = sectionsNodes.map(path(["frontmatter", "anchor"])).filter(identity);
-  console.log(anchors);
+
+  const navAnchors = sectionsNodes.filter(({ frontmatter }) => frontmatter.inNavbar).map(({ frontmatter }) => ({ anchor: frontmatter.anchor, id: frontmatter.anchorId }));
+  const footAnchors = sectionsNodes.filter(({ frontmatter }) => frontmatter.inFooter).map(({ frontmatter }) => ({ anchor: frontmatter.anchor, id: frontmatter.anchorId }));
 
   return {
     topNode,
@@ -30,5 +31,7 @@ export default function breakDownAllNodes(nodes) {
     footerNode,
     sectionsNodes,
     anchors,
+    navAnchors,
+    footAnchors
   };
 }

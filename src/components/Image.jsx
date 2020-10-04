@@ -18,6 +18,8 @@ const Image = ({ fileName, alt, ...restProps }) => (
                   ...GatsbyImageSharpSizes
                 }
               }
+              extension
+              publicURL
             }
           }
         }
@@ -30,8 +32,12 @@ const Image = ({ fileName, alt, ...restProps }) => (
         return null;
       }
 
-      const imageSizes = image.node.childImageSharp.sizes;
-      return <Img alt={alt} sizes={imageSizes} {...restProps} />;
+      if (image.node.extension !== "svg") {
+        const imageSizes = image.node.childImageSharp.sizes;
+        return <Img alt={alt} sizes={imageSizes} {...restProps} />
+      }
+
+      return <img src={image.node.publicURL} alt={alt} {...restProps} />;
     }}
   />
 );

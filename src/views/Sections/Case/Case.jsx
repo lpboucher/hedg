@@ -12,7 +12,7 @@ const Case = ({ className, frontmatter }) => {
     return null;
   }
 
-  const { anchor, header: rootHeader, subheader: rootSubHeader, content, imageFileName } = frontmatter;
+  const { anchorId, header: rootHeader, subheader: rootSubHeader, content, imageFileName } = frontmatter;
 
   let imagePart;
   if (imageFileName) {
@@ -20,7 +20,7 @@ const Case = ({ className, frontmatter }) => {
   }
 
   return (
-    <PageSection className={className} id={anchor}>
+    <PageSection className={className} id={anchorId}>
       <Row>
         <SectionHeader header={rootHeader} subheader={rootSubHeader} />
         <Col>

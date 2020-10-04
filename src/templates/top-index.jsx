@@ -33,36 +33,32 @@ export const query = graphql`
     ) {
       nodes {
         frontmatter {
-          brand
+          address
           anchor
-          clients {
-            href
-            imageFileName
-          }
+          anchorId
+          brandLogo
+          brandName
           content
           copyright
           header
-          email
           imageFileName
+          inNavbar
+          inFooter
           jumpToAnchor
           jumpToAnchorText
           menuText
-          portfolios {
-            content
-            extraInfo
-            header
-            subheader
-            imageFileNameDetail
-            imageFileName
+          partners {
+            logo
+            name
           }
-          privacyHref
-          privacyText
+          phone
           services {
             content
             header
             iconName
             imageFileName
           }
+          slogan
           social {
             facebook
             github
@@ -75,32 +71,10 @@ export const query = graphql`
             content
           }
           subheader
-          teamMember {
-            header
-            imageFileName
-            social {
-              facebook
-              github
-              linkedin
-              medium
-              twitter
-            }
-            subheader
-          }
-          telephone
-          termsHref
-          termsText
           testimonials {
             content
           }
           title
-          timeline {
-            content
-            header
-            imageContent
-            imageFileName
-            subheader
-          }
         }
         fields {
           fileName
@@ -119,7 +93,7 @@ const IndexPage = ({ data, pathContext: { langKey, defaultLang, langTextMap } })
     allMarkdownRemark: { nodes },
   } = data;
 
-  const { topNode, navBarNode, anchors, footerNode, sectionsNodes } = breakDownAllNodes(nodes);
+  const { topNode, navBarNode, footerNode, sectionsNodes, navAnchors, footAnchors } = breakDownAllNodes(nodes);
 
   let langSelectorPart;
   if (langTextMap != null && Object.keys(langTextMap).length > 1) {
@@ -127,7 +101,7 @@ const IndexPage = ({ data, pathContext: { langKey, defaultLang, langTextMap } })
       <>
         <LanguageSelector langKey={langKey} defaultLang={defaultLang} langTextMap={langTextMap} />
         <ScrollToButton jumpToAnchor="Services" jumpToAnchorText="Refer Us" color="primary" />
-        <ScrollToButton jumpToAnchor="Services" jumpToAnchorText="Book an appointment" color="success" />
+        <ScrollToButton jumpToAnchor="contact" jumpToAnchorText="Book an appointment" color="success" />
       </>
     );
   }
@@ -136,7 +110,7 @@ const IndexPage = ({ data, pathContext: { langKey, defaultLang, langTextMap } })
     <>
       <SEO lang={langKey} title="Top" keywords={keywords} description={description} />
       <Navbar
-        anchors={anchors}
+        anchors={navAnchors}
         frontmatter={navBarNode.frontmatter}
         extraItems={langSelectorPart}
       />
@@ -156,7 +130,7 @@ const IndexPage = ({ data, pathContext: { langKey, defaultLang, langTextMap } })
           ) : null;
         })
       }
-      <Footer frontmatter={footerNode.frontmatter} />
+      <Footer anchors={footAnchors} frontmatter={footerNode.frontmatter} />
     </>
   );
 };

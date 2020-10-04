@@ -40,11 +40,22 @@
     &.navbar-shrink {
       padding-top: 0;
       padding-bottom: 0;
-      background-color: $gray-900;
+      background-color: $light;
       .navbar-brand {
         font-size: 1.25em;
         padding: 12px 0;
       }
     }
+  }
+
+  .logo-root {
+    width: 140px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+
+  .logo-shrink {
+    width: 120px;
   }
 }

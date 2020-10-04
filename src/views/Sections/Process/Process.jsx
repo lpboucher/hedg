@@ -14,17 +14,17 @@ const Process = ({ className, frontmatter }) => {
     return null;
   }
 
-  const { anchor, header: rootHeader, subheader: rootSubHeader, steps } = frontmatter;
+  const { anchorId, header: rootHeader, subheader: rootSubHeader, steps } = frontmatter;
 
   return (
-    <PageSection className={className} id={anchor}>
+    <PageSection className={className} id={anchorId}>
       <Row>
         <SectionHeader header={rootHeader} subheader={rootSubHeader} />
       </Row>
       <Row className="process">
         {steps.map((step, index) => (
-          <Col key={step.title} >
-            <ProcessItem stepNumber={index + 1} {...step} />
+          <Col key={step.title}>
+            <ProcessItem className={className} stepNumber={index + 1} {...step} />
           </Col>
         ))}
       </Row>

@@ -1,29 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
+import clsx from "clsx";
 
 import { Row, Col } from "react-bootstrap";
 
-import CircleFAButton from "components/CircleFAButton";
 import Image from "components/Image";
 import "./ServiceItem.scss";
 
-const ServiceItem = ({ iconName, imageFileName, header, content, itemIndex }) => {
-  const textFirst = itemIndex % 2 === 0 ? "first" : "last";
-
-  let iconPart;
-  if (iconName) {
-    iconPart = <CircleFAButton iconName={iconName} />;
-  }
-
+const ServiceItem = ({ imageFileName, header, content, inverted }) => {
   let imagePart;
   if (imageFileName) {
     imagePart = <Image className="service-item-image" fileName={imageFileName} />;
   }
 
   return (
-    <Row className="text-center">
-      <Col md={{ order: textFirst }}>
-        {iconPart}
+    <Row className={clsx("text-center align-items-center", { "flex-row-reverse": inverted })}>
+      <Col className="text-center">
         {imagePart}
       </Col>
       <Col>
@@ -35,19 +27,17 @@ const ServiceItem = ({ iconName, imageFileName, header, content, itemIndex }) =>
 };
 
 ServiceItem.propTypes = {
-  iconName: PropTypes.string,
   imageFileName: PropTypes.string,
   header: PropTypes.string,
   content: PropTypes.string,
-  itemIndex: PropTypes.number,
+  inverted: PropTypes.bool,
 };
 
 ServiceItem.defaultProps = {
-  iconName: null,
   imageFileName: null,
   header: "",
   content: "",
-  itemIndex: 1,
+  inverted: false,
 };
 
 export default ServiceItem;

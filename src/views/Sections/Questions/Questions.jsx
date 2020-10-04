@@ -11,10 +11,10 @@ const Process = ({ className, frontmatter }) => {
     return null;
   }
 
-  const { anchor, header: rootHeader, subheader: rootSubHeader } = frontmatter;
+  const { anchorId, header: rootHeader, subheader: rootSubHeader } = frontmatter;
 
   return (
-    <PageSection className={className} id={anchor}>
+    <PageSection className={className} id={anchorId}>
       <Row>
         <Col className="text-center">
           <SectionHeader header={rootHeader} subheader={rootSubHeader} />

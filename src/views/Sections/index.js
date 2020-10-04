@@ -1,10 +1,7 @@
-export { default as About } from "./About";
-export { default as Contact } from "./Contact";
-export { default as Portfolio } from "./Portfolio";
 export { default as Services } from "./Services";
-export { default as Team } from "./Team";
-export { default as Clients } from "./Clients";
 export { default as Process } from "./Process";
 export { default as Questions } from "./Questions";
+export { default as Contact } from "./Contact";
 export { default as Case } from "./Case";
 export { default as Testimonials } from "./Testimonials";
+export { default as Partners } from "./Partners";
