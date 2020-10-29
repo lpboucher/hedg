@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from "react";
 import PropTypes from "prop-types";
 
@@ -20,7 +21,9 @@ const Contact = ({ className, frontmatter }) => {
       </Row>
       <Row className="align-items-center justify-content-center">
         <Col>
-          <Form className="w-75">
+          {/* <Form className="w-75" netlify-honeypot="bot-field" data-netlify="true" name="contact">
+            <input type="hidden" name="bot-field" />
+            <input type="hidden" name="form-name" value="contact" />
             <Form.Group controlId="exampleForm.ControlInput1">
               <Form.Label>First name & Last Name</Form.Label>
               <Form.Control className="bg-transparent border-primary border-top-0 border-left-0 border-right-0 rounded-0" />
@@ -33,8 +36,30 @@ const Contact = ({ className, frontmatter }) => {
               <Form.Label>E-mail</Form.Label>
               <Form.Control type="email" className="bg-transparent border-primary border-top-0 border-left-0 border-right-0 rounded-0" />
             </Form.Group>
-          </Form>
-          <Button size="xl" variant="secondary" className="btn-rounded">Submit</Button>
+  </Form> */}
+          <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+            <div className="form-group">
+              <label htmlFor="name">Name:</label>
+              <input type="text" className="form-control" id="name" name="name" required />
+            </div>
+            <div className="form-group">
+              <label htmlFor="email">Email:</label>
+              <input type="email" className="form-control" id="email" name="email" required />
+            </div>
+            <div className="form-group">
+              <label htmlFor="subject">Subject:</label>
+              <input type="text" className="form-control" id="subject" name="subject" required />
+            </div>
+            <div className="form-group">
+              <label htmlFor="message">Message:</label>
+              <textarea className="form-control" rows="10" id="message" name="message" required />
+            </div>
+            <div className="form-group">
+              <div data-netlify-recaptcha="true" />
+            </div>
+            <button type="submit" className="btn btn-primary">Submit</button>
+          </form>
+          <Button size="xl" variant="secondary" className="btn-rounded" type="submit">Submit</Button>
         </Col>
         <Col className="text-center">
           <Image className="image" fileName={imageFileName} />
