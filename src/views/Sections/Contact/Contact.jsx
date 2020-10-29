@@ -37,7 +37,7 @@ const Contact = ({ className, frontmatter }) => {
               <Form.Control type="email" className="bg-transparent border-primary border-top-0 border-left-0 border-right-0 rounded-0" />
             </Form.Group>
   </Form> */}
-          <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+          <form name="contact" method="POST" data-netlify="true">
             <div className="form-group">
               <label htmlFor="name">Name:</label>
               <input type="text" className="form-control" id="name" name="name" required />
@@ -53,9 +53,6 @@ const Contact = ({ className, frontmatter }) => {
             <div className="form-group">
               <label htmlFor="message">Message:</label>
               <textarea className="form-control" rows="10" id="message" name="message" required />
-            </div>
-            <div className="form-group">
-              <div data-netlify-recaptcha="true" />
             </div>
             <button type="submit" className="btn btn-primary">Submit</button>
           </form>
