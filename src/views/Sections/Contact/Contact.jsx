@@ -76,7 +76,7 @@ const Contact = ({ className, frontmatter }) => {
                 <label className="email-input" htmlFor="email-input">Email address:</label>
                 <input onChange={handleChange} type="email" name="email" className="form-control bg-transparent border-0" id="email-input" />
               </div>
-              <Button size="xl" variant="secondary" className="btn-rounded">Submit</Button>
+              <Button type="submit" size="xl" variant="secondary" className="btn-rounded">Submit</Button>
             </form>
           </div>
         </Col>
