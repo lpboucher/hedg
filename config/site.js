@@ -12,7 +12,6 @@ module.exports = {
   defaultLang: "en",
   langTextMap: {
     en: "English",
-    ja: "日本語",
     fr: "Francais",
   },
 };
