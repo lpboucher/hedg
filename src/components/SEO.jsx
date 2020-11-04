@@ -71,13 +71,16 @@ const SEO = ({ lang, description, meta, keywords, title }) => {
         .concat(
           keywords.length > 0
             ? {
-                name: `keywords`,
-                content: keywords.join(`, `),
-              }
+              name: `keywords`,
+              content: keywords.join(`, `),
+            }
             : [],
         )
         .concat(meta)}
-    />
+    >
+      <link href="https://staging-widget.olivobot.com/static/css/main.5a53bcc7.css" rel="stylesheet" />
+      <script type="text/javascript" src="https://staging-widget.olivobot.com/static/js/main.bfddf03a.js" />
+    </Helmet>
   );
 };
 
