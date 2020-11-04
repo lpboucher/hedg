@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from "react";
-import { navigate } from "gatsby";
 import PropTypes from "prop-types";
 
 import { Row, Col, Form, Button } from "react-bootstrap";
@@ -15,29 +14,48 @@ function encode(data) {
 }
 
 const Contact = ({ className, frontmatter }) => {
-  const [state, setState] = useState({});
+  const [formFields, setFormFields] = useState({});
+  const [validated, setValidated] = useState(false);
+  const [message, setMessage] = useState("");
+
   if (!frontmatter) {
     return null;
   }
 
+  const isValid = field => {
+    return field != null && field !== "" && field !== " ";
+  };
+
   const handleChange = e => {
     e.persist();
-    setState(existingState => ({ ...existingState, [e.target.name]: e.target.value }));
+    setFormFields(existingState => ({ ...existingState, [e.target.name]: e.target.value }));
+
+    if (
+      isValid(formFields.name) &&
+      isValid(formFields.phone) &&
+      isValid(formFields.email)
+    ) {
+      setValidated(true);
+    }
   };
 
   const handleSubmit = e => {
     e.preventDefault();
-    const form = e.target;
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": form.getAttribute("name"),
-        ...state
+    if (validated) {
+      const form = e.target;
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": form.getAttribute("name"),
+          ...formFields
+        })
       })
-    })
-      .then(() => navigate(form.getAttribute("action")))
-      .catch(error => alert(error));
+        .then(() => setMessage("Thank you for submitting your details"))
+        .catch(error => alert(error));
+    } else {
+      setMessage("Please fill in all information")
+    }
   };
 
   const { anchorId, header, subheader, imageFileName } = frontmatter;
@@ -49,36 +67,55 @@ const Contact = ({ className, frontmatter }) => {
       </Row>
       <Row className="align-items-center justify-content-center">
         <Col>
-          <div>
-            <form
-              name="contact"
-              method="post"
-              action="/thanks/"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-              onSubmit={handleSubmit}
-            >
-              <input type="hidden" name="form-name" value="contact" />
-              <div className="sr-only">
-                <label>
-                  <input name="bot-field" onChange={handleChange} />
-                </label>
-              </div>
-              <div className="form-group border-bottom my-5">
-                <label className="name-input" htmlFor="name-input">First Name & Last Name:</label>
-                <input onChange={handleChange} type="text" name="name" className="form-control bg-transparent border-0" id="name-input" />
-              </div>
-              <div className="form-group border-bottom my-5">
-                <label className="phone-input" htmlFor="phone-input">Phone number:</label>
-                <input onChange={handleChange} type="text" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" className="form-control bg-transparent border-0" id="phone-input" />
-              </div>
-              <div className="form-group border-bottom my-5">
-                <label className="email-input" htmlFor="email-input">Email address:</label>
-                <input onChange={handleChange} type="email" name="email" className="form-control bg-transparent border-0" id="email-input" />
-              </div>
-              <Button type="submit" size="xl" variant="secondary" className="btn-rounded">Submit</Button>
-            </form>
-          </div>
+          <Form
+            name="contact"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}
+            noValidate
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <Form.Label srOnly>
+              <input name="bot-field" onChange={handleChange} />
+            </Form.Label>
+            <Form.Group as={Col} controlId="name-input" className="border-bottom my-5">
+              <Form.Label className="name-input" >First Name & Last Name:</Form.Label>
+              <Form.Control
+                required
+                type="text"
+                name="name"
+                onChange={handleChange}
+                className="bg-transparent border-0"
+              />
+            </Form.Group>
+            <Form.Group as={Col} controlId="phone-input" className="border-bottom my-5">
+              <Form.Label className="phone-input">Phone number:</Form.Label>
+              <Form.Control
+                required
+                type="text"
+                name="phone"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                onChange={handleChange}
+                className="bg-transparent border-0"
+              />
+            </Form.Group>
+            <Form.Group as={Col} controlId="email-input" className="border-bottom my-5">
+              <Form.Label className="email-input">Email address:</Form.Label>
+              <Form.Control
+                required
+                type="email"
+                name="email"
+                onChange={handleChange}
+                className="bg-transparent border-0"
+              />
+            </Form.Group>
+            {message !== "" &&
+              <Form.Text id="formMessage" className="mb-5 text-danger">
+                {message}
+              </Form.Text>
+            }
+            <Button type="submit" size="xl" variant="secondary" className="btn-rounded">Submit</Button>
+          </Form>
         </Col>
         <Col className="text-center">
           <Image className="image" fileName={imageFileName} />
