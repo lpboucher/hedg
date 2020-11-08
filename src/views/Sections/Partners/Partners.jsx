@@ -3,9 +3,13 @@ import PropTypes from "prop-types";
 import clsx from "clsx";
 
 import { Row, Col } from "react-bootstrap";
+import Carousel from "react-elastic-carousel";
+
 import PageSection from "components/PageSection";
 import SectionHeader from "components/SectionHeader";
 import Image from "components/Image";
+
+import "./Partners.scss";
 
 const Partners = ({ className, frontmatter }) => {
   if (!frontmatter) {
@@ -20,11 +24,36 @@ const Partners = ({ className, frontmatter }) => {
         <SectionHeader header={header} />
       </Row>
       <Row>
-        {partners.map(({ name, logo }) => (
-          <Col md={3} sm={6} className="my-3" key={logo}>
-            <Image fileName={logo} alt={name} />
-          </Col>
-        ))}
+        <Carousel
+          className="partner-slider"
+          enableAutoPlay
+          showArrows={false}
+          itemsToShow={4}
+          renderPagination={({ pages, activePage, onClick }) => {
+            return (
+              <div className="mt-5 pagination">
+                {pages.map(page => {
+                  const isActivePage = activePage === page
+                  return (
+                    <button
+                      className={clsx("page-btn", isActivePage && "page-btn-active")}
+                      key={page}
+                      onClick={() => onClick(page)}
+                      active={isActivePage}
+                      type="button"
+                    > </button>
+                  )
+                })}
+              </div>
+            )
+          }}
+        >
+          {partners.map(({ name, logo }) => (
+            <Col className={clsx("my-3", className)} key={logo}>
+              <Image fileName={logo} alt={name} />
+            </Col>
+          ))}
+        </Carousel>
       </Row>
     </PageSection>
   );

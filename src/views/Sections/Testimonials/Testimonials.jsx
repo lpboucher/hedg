@@ -31,7 +31,7 @@ const Testimonials = ({ className, frontmatter }) => {
         itemsToShow={3}
         renderPagination={({ pages, activePage, onClick }) => {
           return (
-            <div className="pagination">
+            <div className="mt-5 pagination">
               {pages.map(page => {
                 const isActivePage = activePage === page
                 return (

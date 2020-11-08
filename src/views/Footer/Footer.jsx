@@ -3,6 +3,9 @@ import PropTypes from "prop-types";
 
 import { Container, Row, Col, Nav } from "react-bootstrap";
 import NavItem from "components/NavItem";
+import Image from "components/Image";
+
+import "./Footer.scss";
 
 const Footer = ({ anchors, frontmatter }) => {
   if (!frontmatter) {
@@ -10,6 +13,8 @@ const Footer = ({ anchors, frontmatter }) => {
   }
 
   const {
+    brandLogo,
+    brandName,
     slogan,
     address,
     phone,
@@ -19,24 +24,24 @@ const Footer = ({ anchors, frontmatter }) => {
   return (
     <footer className="bg-primary text-white footer py-5">
       <Container>
-        <Row className="align-items-center text-center">
+        <Row className="text-center">
           <Col className="d-flex flex-column justify-content-between text-lg-left">
             <div>
-              <h3>Hedg.</h3>
-              <p>{slogan}</p>
+              <Image className="light-logo" fileName={brandLogo} alt={brandName} />
+              <p className="small">{slogan}</p>
             </div>
             <div>
-              <p>{address}</p>
-              <p>{phone}</p>
+              <p className="mb-0 mid-font">{address}</p>
+              <p className="mb-0 mid-font">{phone}</p>
             </div>
+            <p className="small">{copyright}</p>
           </Col>
-          <Col className="my-3 my-lg-0">
-            <Nav className="text-uppercase ml-auto">
+          <Col className="col-5 my-3 my-lg-0">
+            <Nav className="footer-link text-uppercase ml-auto">
               {anchors.map(({ anchor, id }) => (
                 <NavItem key={id} to={id}>{anchor}</NavItem>
               ))}
             </Nav>
-            <p>{copyright}</p>
           </Col>
         </Row>
       </Container>
@@ -45,7 +50,10 @@ const Footer = ({ anchors, frontmatter }) => {
 };
 
 Footer.propTypes = {
-  anchors: PropTypes.arrayOf(PropTypes.string),
+  anchors: PropTypes.arrayOf(PropTypes.shape({
+    anchor: PropTypes.string,
+    id: PropTypes.string,
+  })),
   frontmatter: PropTypes.object,
 };
 

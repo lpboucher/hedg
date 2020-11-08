@@ -38,8 +38,14 @@ export const query = graphql`
           anchorId
           brandLogo
           brandName
+          closer
           content
           copyright
+          descriptions {
+            label
+            image
+          }
+          explainer
           header
           imageFileName
           inNavbar
@@ -71,6 +77,7 @@ export const query = graphql`
             content
           }
           subheader
+          subheaderFocus
           testimonials {
             content
           }
@@ -93,6 +100,8 @@ const IndexPage = ({ data, pathContext: { langKey, defaultLang, langTextMap } })
     allMarkdownRemark: { nodes },
   } = data;
 
+  const location = "/";
+
   const { topNode, navBarNode, footerNode, sectionsNodes, navAnchors, footAnchors } = breakDownAllNodes(nodes);
 
   let langSelectorPart;
@@ -100,19 +109,20 @@ const IndexPage = ({ data, pathContext: { langKey, defaultLang, langTextMap } })
     langSelectorPart = (
       <>
         <LanguageSelector langKey={langKey} defaultLang={defaultLang} langTextMap={langTextMap} />
-        <ScrollToButton jumpToAnchor="Services" jumpToAnchorText="Refer Us" color="primary" />
-        <ScrollToButton jumpToAnchor="contact" jumpToAnchorText="Book an appointment" color="success" />
+        <ScrollToButton spaced target="/refer" jumpToAnchorText="Refer Us" color="primary" />
+        <ScrollToButton spaced jumpToAnchor="contact" jumpToAnchorText="Book an appointment" color="success" />
       </>
     );
   }
 
   return (
     <>
-      <SEO lang={langKey} title="Top" keywords={keywords} description={description} />
+      <SEO lang={langKey} title="Hedg" keywords={keywords} description={description} />
       <Navbar
         anchors={navAnchors}
         frontmatter={navBarNode.frontmatter}
         extraItems={langSelectorPart}
+        location={location}
       />
       <Top frontmatter={topNode.frontmatter} />
       {

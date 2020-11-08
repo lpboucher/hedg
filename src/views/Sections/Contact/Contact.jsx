@@ -7,6 +7,8 @@ import PageSection from "components/PageSection";
 import SectionHeader from "components/SectionHeader";
 import Image from "components/Image";
 
+import "./Contact.scss";
+
 function encode(data) {
   return Object.keys(data)
     .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
@@ -52,7 +54,7 @@ const Contact = ({ className, frontmatter }) => {
         })
       })
         .then(() => setMessage("Thank you for submitting your details"))
-        .catch(error => alert(error));
+        .catch(() => setMessage("Oups, it looks like something went wrong..."));
     } else {
       setMessage("Please fill in all information")
     }
@@ -65,7 +67,10 @@ const Contact = ({ className, frontmatter }) => {
       <Row>
         <SectionHeader header={header} subheader={subheader} />
       </Row>
-      <Row className="align-items-center justify-content-center">
+      <Row className="contact align-items-center justify-content-center">
+        <Col className="text-center">
+          <Image className="image" fileName={imageFileName} />
+        </Col>
         <Col>
           <Form
             name="contact"
@@ -78,7 +83,7 @@ const Contact = ({ className, frontmatter }) => {
             <Form.Label srOnly>
               <input name="bot-field" onChange={handleChange} />
             </Form.Label>
-            <Form.Group as={Col} controlId="name-input" className="border-bottom my-5">
+            <Form.Group as={Col} controlId="name-input" className="border-bottom border-primary my-5">
               <Form.Label className="name-input" >First Name & Last Name:</Form.Label>
               <Form.Control
                 required
@@ -88,7 +93,7 @@ const Contact = ({ className, frontmatter }) => {
                 className="bg-transparent border-0"
               />
             </Form.Group>
-            <Form.Group as={Col} controlId="phone-input" className="border-bottom my-5">
+            <Form.Group as={Col} controlId="phone-input" className="border-bottom border-primary my-5">
               <Form.Label className="phone-input">Phone number:</Form.Label>
               <Form.Control
                 required
@@ -99,7 +104,7 @@ const Contact = ({ className, frontmatter }) => {
                 className="bg-transparent border-0"
               />
             </Form.Group>
-            <Form.Group as={Col} controlId="email-input" className="border-bottom my-5">
+            <Form.Group as={Col} controlId="email-input" className="border-bottom border-primary my-5">
               <Form.Label className="email-input">Email address:</Form.Label>
               <Form.Control
                 required
@@ -114,11 +119,8 @@ const Contact = ({ className, frontmatter }) => {
                 {message}
               </Form.Text>
             }
-            <Button type="submit" size="xl" variant="secondary" className="btn-rounded">Submit</Button>
+            <Button type="submit" size="xl" variant="secondary" className="btn-rounded font-weight-bold">Submit</Button>
           </Form>
-        </Col>
-        <Col className="text-center">
-          <Image className="image" fileName={imageFileName} />
         </Col>
       </Row>
     </PageSection>

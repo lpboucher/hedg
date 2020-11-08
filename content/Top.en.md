@@ -1,6 +1,6 @@
 ---
 header: "A tailored solution to your mortgage insurance."
-subheader: "Our advisors provide a customized service that takes into account the entire financial situation of its clients and finds the best insurance plan and price for their needs."
+subheader: "We believe everyone is a different, therefore your financial plan should be built around you and your family’s goals and dreams. Protecting our clients financial future is our #1 priority."
 imageFileName: "header.svg"
 jumpToAnchor: "services"
 jumpToAnchorText: "Get started"

@@ -14,7 +14,7 @@ const ServiceItem = ({ imageFileName, header, content, inverted }) => {
   }
 
   return (
-    <Row className={clsx("text-center align-items-center", { "flex-row-reverse": inverted })}>
+    <Row className={clsx("service text-center align-items-center", { "flex-row-reverse": inverted })}>
       <Col className="text-center">
         {imagePart}
       </Col>

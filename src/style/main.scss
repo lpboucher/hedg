@@ -79,3 +79,79 @@ img::-moz-selection {
 .btn-rounded {
   border-radius: 2rem !important;
 }
+
+.container {
+  max-width: none;
+  padding: 0 35px;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.spaced {
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+}
+
+/* Components */
+// Chat widget Styles
+.olivo {
+  .rcw-widget-container {
+    .rcw-conversation-container {
+      .rcw-header {
+        background-color: $warning !important;
+
+        .rcw-title {
+          width: 100%;
+          background: url('../../content/assets/hedglogo_white.png');
+          background-repeat:no-repeat;
+          background-size: contain;
+          background-position: center;
+          filter: none;
+        }
+      }
+
+      .rcw-messages-container {
+        .rcw-message {
+          .rcw-avatar {
+            filter: invert(1);
+          }
+          .quick-button {
+            border-color: $warning !important;
+          }
+          .rcw-client {
+            background-color: $warning !important;
+          }
+        }
+      }
+    }
+
+    .rcw-launcher {
+      background-color: $warning !important;
+      background: url('../../content/assets/Harry.png');
+      background-repeat:no-repeat;
+      background-size: 50% 50%;
+      background-position: center;
+
+      img {
+        display: none;
+      }
+    }
+  }
+
+  .rcw-widget-container.rcw-opened {
+    .rcw-launcher {
+      background-color: $warning !important;
+      background: none;
+      background-repeat:no-repeat;
+      background-size: 50% 50%;
+      background-position: center;
+
+      img {
+        display: inline;
+      }
+    }
+  }
+}

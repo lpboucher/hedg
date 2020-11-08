@@ -3,12 +3,18 @@
   position: relative;
   padding: 0;
   list-style: none;
+
+  .col {
+    padding: 0 25px;
+  }
+
   &:before {
     position: absolute;
     top: 25%;
+    left: 10%;
     bottom: 0;
     height: 2px;
-    width: 100%;
+    width: 80%;
     content: "";
     background-color: $primary;
   }

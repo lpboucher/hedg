@@ -15,6 +15,8 @@ export default function breakDownAllNodes(nodes) {
   const navBarNode = nodes.find(filterByFileName(/navbar/i)) || {};
   // footer
   const footerNode = nodes.find(filterByFileName(/footer/i)) || {};
+  // refer
+  const referNode = nodes.find(filterByFileName(/refer/i)) || {};
 
   // sections part
   const sectionsNodes = nodes.filter(filterByDirectoryName(/sections/i));
@@ -29,6 +31,7 @@ export default function breakDownAllNodes(nodes) {
     topNode,
     navBarNode,
     footerNode,
+    referNode,
     sectionsNodes,
     anchors,
     navAnchors,

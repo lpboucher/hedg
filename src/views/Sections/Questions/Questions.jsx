@@ -6,19 +6,22 @@ import { Row, Col, Button } from "react-bootstrap";
 import SectionHeader from "components/SectionHeader";
 import PageSection from "components/PageSection";
 
+import "./Questions.scss";
+
 const Process = ({ className, frontmatter }) => {
   if (!frontmatter) {
     return null;
   }
 
-  const { anchorId, header: rootHeader, subheader: rootSubHeader } = frontmatter;
+  const { anchorId, header: rootHeader, subheader: rootSubHeader, explainer } = frontmatter;
 
   return (
     <PageSection className={className} id={anchorId}>
       <Row>
-        <Col className="text-center">
+        <Col className="questions text-center">
           <SectionHeader header={rootHeader} subheader={rootSubHeader} />
-          <Button size="xl" variant="warning" className="btn-rounded">Ask your questions</Button>
+          <p>{explainer}</p>
+          <Button size="xl" variant="warning" className="mt-3 btn-rounded font-weight-bold">Ask your questions</Button>
         </Col>
       </Row>
     </PageSection>

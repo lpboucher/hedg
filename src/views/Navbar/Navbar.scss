@@ -1,6 +1,9 @@
 // Styling for the navbar
+nav.navbar {
+  padding: 1rem;
+}
+
 .navbar-root {
-  background-color: $gray-900;
   .navbar-toggler {
     font-size: 12px;
     right: 0;
@@ -20,6 +23,9 @@
     &:hover {
       color: darken($primary, 10%);
     }
+  }
+  .navbar-collapse {
+    background-color: $light;
   }
 }
 @media (min-width: 992px) {

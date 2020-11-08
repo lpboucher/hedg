@@ -7,6 +7,8 @@ import PageSection from "components/PageSection";
 import SectionHeader from "components/SectionHeader";
 import Image from "components/Image";
 
+import "./Case.scss";
+
 const Case = ({ className, frontmatter }) => {
   if (!frontmatter) {
     return null;
@@ -23,11 +25,11 @@ const Case = ({ className, frontmatter }) => {
     <PageSection className={className} id={anchorId}>
       <Row>
         <SectionHeader header={rootHeader} subheader={rootSubHeader} />
-        <Col>
+        <Col className="fix-height">
           {imagePart}
         </Col>
-        <Col>
-          <p className="text-muted">{content}</p>
+        <Col className="fix-height">
+          <p className="scrollable text-muted">{content}</p>
         </Col>
       </Row>
     </PageSection>

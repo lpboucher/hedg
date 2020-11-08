@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { navigate } from "gatsby";
 
 import clsx from "clsx";
 
@@ -13,7 +14,7 @@ import NavItem from "components/NavItem";
 
 import "./Navbar.scss";
 
-const MyNavbar = ({ anchors, frontmatter, extraItems }) => {
+const MyNavbar = ({ location, anchors, frontmatter, extraItems }) => {
   const { brandLogo, brandName, menuText } = frontmatter;
 
   const handleScrollToTop = useSmoothScrollTo(0);
@@ -27,8 +28,12 @@ const MyNavbar = ({ anchors, frontmatter, extraItems }) => {
   }, []);
   const handleBrandClick = React.useCallback(() => {
     closeMenu();
-    handleScrollToTop();
-  }, [closeMenu, handleScrollToTop]);
+    if (location === "/") {
+      handleScrollToTop()
+    } else {
+      navigate("/")
+    };
+  }, [location, closeMenu, handleScrollToTop]);
 
   const [shrink, setShrink] = React.useState(false);
   const handleWindowScroll = React.useCallback(() => {
@@ -54,7 +59,7 @@ const MyNavbar = ({ anchors, frontmatter, extraItems }) => {
         </Navbar.Toggle>
         <Navbar.Collapse>
           <Nav className="text-uppercase ml-auto">
-            {anchors.map(({ anchor, id }) => (
+            {location === "/" && anchors.map(({ anchor, id }) => (
               <NavItem key={id} to={id} onClick={closeMenu}>{anchor}</NavItem>
             ))}
           </Nav>
@@ -66,15 +71,20 @@ const MyNavbar = ({ anchors, frontmatter, extraItems }) => {
 };
 
 MyNavbar.propTypes = {
-  anchors: PropTypes.arrayOf(PropTypes.string),
+  anchors: PropTypes.arrayOf(PropTypes.shape({
+    anchor: PropTypes.string,
+    id: PropTypes.string,
+  })),
   frontmatter: PropTypes.object,
   extraItems: PropTypes.any,
+  location: PropTypes.string,
 };
 
 MyNavbar.defaultProps = {
   anchors: [],
   frontmatter: {},
   extraItems: null,
+  location: "/",
 };
 
 export default MyNavbar;
