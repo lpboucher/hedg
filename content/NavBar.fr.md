@@ -1,4 +1,5 @@
 ---
-brand: "Start Bootstrap"
-menuText: "メニュー "
+brandLogo: "Logo.svg"
+brandName: "Hedg Financial"
+menuText: "Menu "
 ---
