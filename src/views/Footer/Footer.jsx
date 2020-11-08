@@ -34,7 +34,7 @@ const Footer = ({ anchors, frontmatter }) => {
               <p className="mb-0 mid-font">{address}</p>
               <p className="mb-0 mid-font">{phone}</p>
             </div>
-            <p className="small">{copyright}</p>
+            <p className="mt-3 small">{copyright}</p>
           </Col>
           <Col className="col-5 my-3 my-lg-0">
             <Nav className="footer-link text-uppercase ml-auto">

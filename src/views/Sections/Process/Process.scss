@@ -17,6 +17,10 @@
     width: 80%;
     content: "";
     background-color: $primary;
+
+    @media (max-width: 1000px) {
+      width: 0;
+    }
   }
 }
 @media (min-width: 768px) {

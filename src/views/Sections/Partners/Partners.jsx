@@ -16,6 +16,11 @@ const Partners = ({ className, frontmatter }) => {
     return null;
   }
 
+  const sliderBreakpoints = [
+    { width: 576, itemsToShow: 2, itemsToScroll: 2 },
+    { width: 768, itemsToShow: 4, itemsToScroll: 4 },
+  ]
+
   const { anchorId, header, partners } = frontmatter;
 
   return (
@@ -28,7 +33,7 @@ const Partners = ({ className, frontmatter }) => {
           className="partner-slider"
           enableAutoPlay
           showArrows={false}
-          itemsToShow={4}
+          breakPoints={sliderBreakpoints}
           renderPagination={({ pages, activePage, onClick }) => {
             return (
               <div className="mt-5 pagination">

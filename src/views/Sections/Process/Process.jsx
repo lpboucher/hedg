@@ -23,7 +23,7 @@ const Process = ({ className, frontmatter }) => {
       </Row>
       <Row className="process">
         {steps.map((step, index) => (
-          <Col key={step.title}>
+          <Col md={4} sm={12} key={step.title}>
             <ProcessItem className={className} stepNumber={index + 1} {...step} />
           </Col>
         ))}

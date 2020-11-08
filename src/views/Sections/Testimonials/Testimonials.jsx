@@ -20,6 +20,13 @@ const Testimonials = ({ className, frontmatter }) => {
 
   const { anchorId, header: rootHeader, subheader: rootSubHeader, testimonials } = frontmatter;
 
+  const sliderBreakpoints = [
+    { width: 576, itemsToShow: 1, itemsToScroll: 1 },
+    { width: 768, itemsToShow: 2, itemsToScroll: 2 },
+    { width: 992, itemsToShow: 3, itemsToScroll: 3 },
+    { width: 1200, itemsToShow: 3, itemsToScroll: 3 },
+  ]
+
   return (
     <PageSection className={className} id={anchorId}>
       <Row>
@@ -28,7 +35,7 @@ const Testimonials = ({ className, frontmatter }) => {
       <Carousel
         enableAutoPlay
         showArrows={false}
-        itemsToShow={3}
+        breakPoints={sliderBreakpoints}
         renderPagination={({ pages, activePage, onClick }) => {
           return (
             <div className="mt-5 pagination">

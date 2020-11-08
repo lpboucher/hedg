@@ -1,11 +1,15 @@
 // Styling for the navbar
 nav.navbar {
-  padding: 1rem;
+  padding: 0;
+
+  .container {
+    padding: 1rem;
+  }
 }
 
 .navbar-root {
   .navbar-toggler {
-    font-size: 12px;
+    font-size: 18px;
     right: 0;
     padding: 13px;
     text-transform: uppercase;
@@ -29,14 +33,18 @@ nav.navbar {
   }
 }
 @media (min-width: 992px) {
-  .navbar-root {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
-    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
-    transition: padding-top 0.3s, padding-bottom 0.3s;
-    border: none;
-    background-color: transparent;
+  nav.navbar-root {
+    padding-top: 0;
+    padding-bottom: 0;
+    .container {
+      padding: 1rem calc(35px + 1rem);
+      -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+      -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+      transition: padding-top 0.3s, padding-bottom 0.3s;
+      border: none;
+      background-color: transparent;
+    }
+
     .navbar-brand {
       font-size: 1.75em;
       -webkit-transition: all 0.3s;
@@ -44,9 +52,12 @@ nav.navbar {
       transition: all 0.3s;
     }
     &.navbar-shrink {
-      padding-top: 0;
-      padding-bottom: 0;
-      background-color: $light;
+      .container {
+        padding-top: 0;
+        padding-bottom: 0;
+        background-color: $light;
+      }
+      
       .navbar-brand {
         font-size: 1.25em;
         padding: 12px 0;

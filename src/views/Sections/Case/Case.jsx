@@ -25,10 +25,10 @@ const Case = ({ className, frontmatter }) => {
     <PageSection className={className} id={anchorId}>
       <Row>
         <SectionHeader header={rootHeader} subheader={rootSubHeader} />
-        <Col className="fix-height">
+        <Col md={6} sm={12} className="my-md-0 my-3 fix-height">
           {imagePart}
         </Col>
-        <Col className="fix-height">
+        <Col md={6} sm={12} className="my-md-0 my-3 fix-height">
           <p className="scrollable text-muted">{content}</p>
         </Col>
       </Row>
