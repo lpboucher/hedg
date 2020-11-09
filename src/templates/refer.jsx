@@ -8,6 +8,7 @@ import SEO from "components/SEO";
 import LanguageSelector from "components/LanguageSelector";
 import ScrollToButton from "components/ScrollToButton";
 import Image from "components/Image";
+import ZohoForm from "components/ZohoForm";
 
 import { Jumbotron, Container, Row, Col } from "react-bootstrap";
 
@@ -125,7 +126,7 @@ const ReferPage = ({ data, pathContext: { langKey, defaultLang, langTextMap } })
               <Image className="image" fileName={imageFileName} alt={header || subheader} />
             </Col>
             <Col className="py-5 px-0 justify-content-around">
-              <h1 className="pb-5 font-weight-bold text-primary">{header}</h1>
+              <ZohoForm />
             </Col>
           </Row>
         </Container>
