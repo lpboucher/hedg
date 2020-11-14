@@ -85,8 +85,6 @@ const SEO = ({ lang, description, meta, keywords, title }) => {
           }
         `}
       </style>
-      <link href="https://staging-widget.olivobot.com/static/css/main.5a53bcc7.css" rel="stylesheet" />
-      <script type="text/javascript" src="https://staging-widget.olivobot.com/static/js/main.bfddf03a.js" />
     </Helmet>
   );
 };

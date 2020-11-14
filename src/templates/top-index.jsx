@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
@@ -15,6 +15,7 @@ import breakDownAllNodes from "utils/breakDownAllNodes";
 import fileNameToSectionName from "utils/fileNameToSectionName";
 
 import "../style/main.scss";
+import "../style/olivo.css";
 
 /**
  * get file name list from content/sections folder
@@ -114,6 +115,16 @@ const IndexPage = ({ data, pathContext: { langKey, defaultLang, langTextMap } })
       </>
     );
   }
+
+  useEffect(() => {
+    const olivoDiv = document.createElement("div");
+    olivoDiv.id = "widget";
+    const olivoScript = document.createElement("script");
+    olivoScript.type = 'text/javascript';
+    olivoScript.src = "/chat-widget/main.js"
+    document.body.appendChild(olivoDiv);
+    document.body.appendChild(olivoScript);
+  }, []);
 
   return (
     <>
