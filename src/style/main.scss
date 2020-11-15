@@ -108,6 +108,14 @@ img::-moz-selection {
 // Chat widget Styles
 .olivo {
   .rcw-widget-container {
+    &::before {
+      content: "Ask Harry for a live quote.";
+      font-size: 12px;
+      animation: shake 8.2s cubic-bezier(.36,.07,.19,.97) 3s infinite both;
+      transform: translate3d(0, 0, 0);
+      backface-visibility: hidden;
+      perspective: 1000px;
+    }
     .rcw-conversation-container {
       .rcw-header {
         background-color: $warning !important;
@@ -151,6 +159,9 @@ img::-moz-selection {
   }
 
   .rcw-widget-container.rcw-opened {
+    &::before {
+      display: none;
+    }
     .rcw-launcher {
       background-color: $warning !important;
       background: none;
@@ -162,5 +173,23 @@ img::-moz-selection {
         display: inline;
       }
     }
+  }
+}
+
+@keyframes shake {
+  1%, 9% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  2%, 8% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  3%, 5%, 7% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  4%, 6% {
+    transform: translate3d(4px, 0, 0);
   }
 }
