@@ -11,7 +11,7 @@ const Jumbo = ({ className, imageFileName, imageAlt, header, subheader, extraInf
     <Jumbotron fluid className="px-3 bg-light">
       <Container>
         <Row className="align-items-center">
-          <Col className="py-5 px-0 justify-content-around">
+          <Col className="pt-5 px-0 justify-content-around">
             <h1 className="pb-5 font-weight-bold text-primary">{header}</h1>
             <p className="pb-5">
               {subheader}
