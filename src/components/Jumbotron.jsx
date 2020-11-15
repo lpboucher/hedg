@@ -6,7 +6,7 @@ import Image from "components/Image";
 
 import "./Jumbotron.scss";
 
-const Jumbo = ({ className, imageFileName, imageAlt, header, subheader, extraInfo }) => {
+const Jumbo = ({ imageFileName, imageAlt, header, subheader, extraInfo }) => {
   return (
     <Jumbotron fluid className="px-3 bg-light">
       <Container>
@@ -28,7 +28,6 @@ const Jumbo = ({ className, imageFileName, imageAlt, header, subheader, extraInf
 };
 
 Jumbo.propTypes = {
-  className: PropTypes.string,
   imageFileName: PropTypes.string,
   imageAlt: PropTypes.string,
   header: PropTypes.string,
@@ -37,7 +36,6 @@ Jumbo.propTypes = {
 };
 
 Jumbo.defaultProps = {
-  className: null,
   imageFileName: null,
   imageAlt: null,
   header: "",

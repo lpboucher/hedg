@@ -6,7 +6,6 @@ import Navbar from "views/Navbar";
 import Footer from "views/Footer";
 import SEO from "components/SEO";
 import LanguageSelector from "components/LanguageSelector";
-import ScrollToButton from "components/ScrollToButton";
 import Image from "components/Image";
 import ZohoForm from "components/ZohoForm";
 
@@ -99,7 +98,7 @@ const ReferPage = ({ data, pathContext: { langKey, defaultLang, langTextMap } })
 
   const { navBarNode, footerNode, referNode, navAnchors, footAnchors } = breakDownAllNodes(nodes);
 
-  const { header, subheader, imageFileName, jumpToAnchor, jumpToAnchorText } = referNode.frontmatter;
+  const { header, subheader, imageFileName } = referNode.frontmatter;
 
   let langSelectorPart;
   if (langTextMap != null && Object.keys(langTextMap).length > 1) {
