@@ -28,4 +28,10 @@
     width: 40px;
     cursor: initial;
   }
+
+  @media (max-width: 500px) {
+    .cta-container  {
+      flex-wrap: wrap;
+    }
+  }
 }

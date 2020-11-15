@@ -68,10 +68,10 @@ const Contact = ({ className, frontmatter }) => {
         <SectionHeader header={header} subheader={subheader} />
       </Row>
       <Row className="contact align-items-center justify-content-center">
-        <Col className="text-center">
+        <Col md={6} sm={12} className="text-center">
           <Image className="image" fileName={imageFileName} />
         </Col>
-        <Col>
+        <Col md={6} sm={12}>
           <Form
             name="contact"
             data-netlify="true"

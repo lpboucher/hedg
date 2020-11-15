@@ -25,7 +25,7 @@ const Footer = ({ location, anchors, frontmatter }) => {
     <footer className="bg-primary text-white footer py-5">
       <Container>
         <Row className="text-center">
-          <Col className="d-flex flex-column justify-content-between text-lg-left">
+          <Col md={6} sm={12} className="order-md-1 order-sm-2 d-flex flex-column justify-content-between text-lg-left">
             <div>
               <Image className="light-logo" fileName={brandLogo} alt={brandName} />
               <p className="small">{slogan}</p>
@@ -36,7 +36,7 @@ const Footer = ({ location, anchors, frontmatter }) => {
             </div>
             <p className="mt-3 small">{copyright}</p>
           </Col>
-          <Col className="col-5 my-3 my-lg-0">
+          <Col md={5} sm={12} className="order-md-2 order-sm-1 my-3 my-lg-0">
             {location !== "/refer" &&
               <Nav className="footer-link text-uppercase ml-auto">
                 {anchors.map(({ anchor, id }) => (

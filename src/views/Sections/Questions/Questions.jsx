@@ -21,10 +21,10 @@ const Process = ({ className, frontmatter }) => {
         <Col className="questions text-center">
           <SectionHeader header={rootHeader} subheader={rootSubHeader} />
           <p>{explainer}</p>
-          <div className="d-flex align-items-center justify-content-center">
-            <p className="mb-0">{cta1}</p>
-            <Button className="mx-2 harry" />
-            <p className="mb-0">{cta2}</p>
+          <div className="cta-container d-flex align-items-center justify-content-center">
+            <p className="mb-0 cta">{cta1}</p>
+            <Button className="mx-2 harry cta" />
+            <p className="mb-0 cta">{cta2}</p>
           </div>
         </Col>
       </Row>

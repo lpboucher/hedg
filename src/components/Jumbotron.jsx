@@ -11,14 +11,14 @@ const Jumbo = ({ imageFileName, imageAlt, header, subheader, extraInfo }) => {
     <Jumbotron fluid className="px-3 bg-light">
       <Container>
         <Row className="align-items-center">
-          <Col className="pt-5 px-0 justify-content-around">
+          <Col md={6} sm={12} className="pt-5 px-0 justify-content-around">
             <h1 className="pb-5 font-weight-bold text-primary">{header}</h1>
             <p className="pb-5">
               {subheader}
             </p>
             {extraInfo}
           </Col>
-          <Col className="text-center py-5">
+          <Col md={6} sm={12} className="text-center py-5">
             <Image className="image" fileName={imageFileName} alt={imageAlt || header || subheader} />
           </Col>
         </Row>
