@@ -42,6 +42,8 @@ export const query = graphql`
           closer
           content
           copyright
+          cta1
+          cta2
           descriptions {
             label
             image

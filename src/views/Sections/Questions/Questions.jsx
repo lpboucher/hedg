@@ -13,7 +13,7 @@ const Process = ({ className, frontmatter }) => {
     return null;
   }
 
-  const { anchorId, header: rootHeader, subheader: rootSubHeader, explainer } = frontmatter;
+  const { anchorId, header: rootHeader, subheader: rootSubHeader, explainer, cta1, cta2 } = frontmatter;
 
   return (
     <PageSection className={className} id={anchorId}>
@@ -21,7 +21,11 @@ const Process = ({ className, frontmatter }) => {
         <Col className="questions text-center">
           <SectionHeader header={rootHeader} subheader={rootSubHeader} />
           <p>{explainer}</p>
-          <Button size="xl" variant="warning" className="mt-3 btn-rounded font-weight-bold">Ask your questions</Button>
+          <div className="d-flex align-items-center justify-content-center">
+            <p className="mb-0">{cta1}</p>
+            <Button className="mx-2 harry" />
+            <p className="mb-0">{cta2}</p>
+          </div>
         </Col>
       </Row>
     </PageSection>
