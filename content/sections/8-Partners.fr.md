@@ -1,4 +1,5 @@
 ---
+isActive: true
 anchor: "Our partners"
 anchorId: "partners"
 inNavbar: false

@@ -1,4 +1,5 @@
 ---
+isActive: true
 anchor: "Case"
 anchorId: "case"
 inNavbar: false

@@ -1,4 +1,5 @@
 ---
+isActive: true
 anchor: "Have more questions"
 anchorId: "questions"
 inNavbar: false

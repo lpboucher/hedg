@@ -20,6 +20,7 @@ export default function breakDownAllNodes(nodes) {
 
   // sections part
   const sectionsNodes = nodes.filter(filterByDirectoryName(/sections/i));
+  const activeSectionsNodes = sectionsNodes.filter(({ frontmatter }) => frontmatter.isActive);
 
   // anchors for NavBar
   const anchors = sectionsNodes.map(path(["frontmatter", "anchor"])).filter(identity);
@@ -32,7 +33,7 @@ export default function breakDownAllNodes(nodes) {
     navBarNode,
     footerNode,
     referNode,
-    sectionsNodes,
+    sectionsNodes: activeSectionsNodes,
     anchors,
     navAnchors,
     footAnchors

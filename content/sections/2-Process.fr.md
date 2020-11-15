@@ -1,4 +1,5 @@
 ---
+isActive: true
 anchor: "How we work"
 anchorId: "process"
 inNavbar: true

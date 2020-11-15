@@ -53,6 +53,7 @@ export const query = graphql`
           imageFileName
           inNavbar
           inFooter
+          isActive
           jumpToAnchor
           jumpToAnchorText
           menuText

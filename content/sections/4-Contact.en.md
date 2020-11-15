@@ -1,4 +1,5 @@
 ---
+isActive: true
 anchor: "Book an appointment"
 anchorId: "contact"
 inNavbar: false
