@@ -130,7 +130,7 @@ const ReferPage = ({ data, pathContext: { langKey, defaultLang, langTextMap } })
           </Row>
         </Container>
       </Jumbotron>
-      <Footer anchors={footAnchors} frontmatter={footerNode.frontmatter} />
+      <Footer anchors={footAnchors} frontmatter={footerNode.frontmatter} location={location} />
     </>
   );
 };

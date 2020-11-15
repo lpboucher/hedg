@@ -7,7 +7,7 @@ import Image from "components/Image";
 
 import "./Footer.scss";
 
-const Footer = ({ anchors, frontmatter }) => {
+const Footer = ({ location, anchors, frontmatter }) => {
   if (!frontmatter) {
     return null;
   }
@@ -37,11 +37,13 @@ const Footer = ({ anchors, frontmatter }) => {
             <p className="mt-3 small">{copyright}</p>
           </Col>
           <Col className="col-5 my-3 my-lg-0">
-            <Nav className="footer-link text-uppercase ml-auto">
-              {anchors.map(({ anchor, id }) => (
-                <NavItem key={id} to={id}>{anchor}</NavItem>
-              ))}
-            </Nav>
+            {location !== "/refer" &&
+              <Nav className="footer-link text-uppercase ml-auto">
+                {anchors.map(({ anchor, id }) => (
+                  <NavItem key={id} to={id}>{anchor}</NavItem>
+                ))}
+              </Nav>
+            }
           </Col>
         </Row>
       </Container>
@@ -55,11 +57,13 @@ Footer.propTypes = {
     id: PropTypes.string,
   })),
   frontmatter: PropTypes.object,
+  location: PropTypes.string,
 };
 
 Footer.defaultProps = {
   anchors: [],
   frontmatter: null,
+  location: "/",
 };
 
 export default Footer;
