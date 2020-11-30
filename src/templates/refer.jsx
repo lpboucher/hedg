@@ -16,8 +16,6 @@ import breakDownAllNodes from "utils/breakDownAllNodes";
 
 import "../style/main.scss";
 
-const iframeSRC = "https://insurancecrmcanada.zohoplatform.com/crm/WebFormServeServlet?rid=1f76f2aed5ba4fcb9d24a9bf427b4c849bcd05a5966f1e75f24147cbb04d147bgid38ba8f6255d2c5eebbda5a355596913ad288491f48f84f5c2b25518a3aba30da";
-
 export const query = graphql`
   query ReferQuery($langKey: String!) {
     site {
@@ -124,14 +122,7 @@ const ReferPage = ({ data, pathContext: { langKey, defaultLang, langTextMap } })
               <Image className="image" fileName={imageFileName} alt={header || subheader} />
             </Col>
             <Col className="py-5 px-0 justify-content-around">
-              {// <ZohoForm />
-              }
-              <iframe
-                title="zohoForm"
-                width="100%"
-                height="1190px"
-                src={iframeSRC}
-              />
+              <ZohoForm />
             </Col>
           </Row>
         </Container>
