@@ -118,10 +118,10 @@ const ReferPage = ({ data, pathContext: { langKey, defaultLang, langTextMap } })
       <Jumbotron fluid className="px-3 mb-0 bg-light">
         <Container>
           <Row className="align-items-center">
-            <Col className="text-center custom-spaced">
+            <Col md={6} sm={12} className="text-center custom-spaced">
               <Image className="image" fileName={imageFileName} alt={header || subheader} />
             </Col>
-            <Col className="py-5 px-0 justify-content-around">
+            <Col md={6} sm={12} className="py-5 px-0 justify-content-around">
               <ZohoForm />
             </Col>
           </Row>

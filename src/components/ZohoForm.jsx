@@ -16,7 +16,7 @@ const zohoString = `
                 value='1f76f2aed5ba4fcb9d24a9bf427b4c849bcd05a5966f1e75f24147cbb04d147b'></input>
             <input class="hidden" type='text' style='display:none;' name='actionType' value='TGVhZHM='></input>
             <input class="hidden" type='text' style='display:none;' name='returnURL'
-                value='https://hedg.ca/'> </input>
+                value='https://www.hedg.ca/'> </input>
             <!-- Do not remove this code. -->
             <style>
                 #crmWebToEntityForm tr,
