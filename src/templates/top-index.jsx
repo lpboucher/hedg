@@ -120,13 +120,17 @@ const IndexPage = ({ data, pathContext: { langKey, defaultLang, langTextMap } })
   }
 
   useEffect(() => {
-    const olivoDiv = document.createElement("div");
+    /* const olivoDiv = document.createElement("div");
     olivoDiv.id = "widget";
     const olivoScript = document.createElement("script");
     olivoScript.type = 'text/javascript';
     olivoScript.src = "/chat-widget/main.js"
     document.body.appendChild(olivoDiv);
-    document.body.appendChild(olivoScript);
+    document.body.appendChild(olivoScript); */
+    const zohoScript = document.createElement("script");
+    zohoScript.type = 'text/javascript';
+    zohoScript.src = "/zoho.js"
+    document.body.appendChild(zohoScript);
   }, []);
 
   return (
