@@ -1,26 +1,26 @@
 ---
 isActive: true
-anchor: "Our Services"
+anchor: "Nos Services"
 anchorId: "services"
 inNavbar: true
 inFooter: true
-header: "We make sure to protect your mortgage from the unexpected"
+header: "Nous nous assurons de protéger votre prêt hypothécaire contre les imprévus"
 subheader: ""
 services: [
   {
     imageFileName: "Life_Insurance.svg",
-    header: "Life Insurance",
-    content: "We insurance your life and legacy. Life insurance is a way of helping your family cope financially when you die. It is intended to provide help to your loved ones when they can't rely on your salary or income any longer. The pay-out can be used to clear debts, pay off the mortgage or just cover everyday expenses."
+    header: "Assurance Vie",
+    content: "Nous assurons votre vie et votre héritage. L’assurance-vie est un moyen d’aider votre famille à faire face financièrement à votre décès. Son intention est  d’aider vos proches lorsqu’ils ne peuvent plus compter sur votre salaire ou revenus. Le paiement peut être utilisé pour effacer ses dettes, rembourser l'hypothèque ou simplement couvrir les dépenses quotidiennes."
   },
   {
     imageFileName: "Disability_Insurance.svg",
-    header: "Disability Insurance",
-    content: "We insure your income in case you’re not mentally or physically capable of working anymore for whatever reasons. Got a plan if someday an injury or accident prevents you from working? Depending on many factors, including your type of work, there is a disability insurance that will fit your exact needs."
+    header: "Assurance Invalidité",
+    content: "Nous assurons votre salaire dans le cas où vous ne seriez plus mentalement ou physiquement capable de travailler pour quelque raison que ce soit. Avez-vous un plan si un jour une blessure ou un accident vous empêche de travailler? Tout dépendant de nombreux facteurs, incluant votre type de travail, il y a une assurance invalidité qui répondra exactement à vos besoins."
   },
   {
     imageFileName: "Critical_Illness.svg",
-    header: "Critical Illness Insurance",
-    content: "\"Even great sailors always pack a life jacket.\" We insure your health in case you are diagnosed with a serious life threatening illness.  Just like a journey out into the sea, your finances involve planing for any unforeseeable situation. Being prepared in the event of any critical illness will protect you and your family from financial ruin."
+    header: "Assurance Maladies Graves",
+    content: "«Même les grands marins ont toujours un gilet de sauvetage.» Nous assurons votre santé en cas de diagnostic d’une maladie grave mettant votre vie en danger. Tout comme un voyage en mer, planifier vos finances implique de planifier toute situation imprévisible. Être prêt en cas de maladie grave protégera vous et votre famille de la ruine financière."
   }
 ]
 ---

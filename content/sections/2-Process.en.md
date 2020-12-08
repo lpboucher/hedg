@@ -13,11 +13,11 @@ steps: [
   },
   {
     title: "Fact-Find Meeting",
-    content: "Meeting face to face, zoom or phone call to identify the clients goals and needs by discussing their entire family financial situation.",
+    content: "Meeting face to face, zoom or phone call to identify the clients goals and needs by discussing their entire family's financial situation.",
   },
   {
     title: "Recommendation",
-    content: "We build a tailored recommendation, implement a plan and complete applications for proposed insurance and investment accounts).",
+    content: "We build a tailored recommendation, implement a plan and complete applications for proposed insurance and investment accounts.",
   },
 ]
 ---

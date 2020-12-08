@@ -1,39 +1,29 @@
 ---
 isActive: true
-anchor: "Case"
+anchor: "Témoignages"
 anchorId: "case"
 inNavbar: false
 inFooter: false
-header: "Here to give you peace of mind"
-subheader: "CASE STUDY"
+header: "Ici pour vous donner la tranquillité d’esprit"
+subheader: "ÉTUDE DE CAS"
 imageFileName: "Case_Study.svg"
-content: "Jack (29) & Jill (28) Have been dating for 2 years and wanted to move in together but didn’t want to pay somebody else’s mortgage in the form of paying rent. So they decide to invest in condo together. Their parents both approved of their decision to invest together but warned them to protect themselves and always be prepared for the worst case scenario.
+content: "Jack (29) et Jill (28) sortent ensemble depuis 2 ans et veulent emménager ensemble mais ne veulent pas payer l'hypothèque de quelqu’un d’autre sous forme de loyer. Ils décident donc d’investir ensemble dans un condo. Leurs parents approuvent leur décision d’investir ensemble mais les avertissent de se protéger et de toujours se préparer pour le pire des cas.
 
-While going through the process of getting a mortgage approval they shopped around at a couple banks and a mortgage brokerage for rates.
-The bank mortgage specialist spoke to them about default mortgage insurance (CMHC), should they put less than 20% down payment.
-Then they were offered their in house mortgage insurance on the outstanding balance of the mortgage should anything happen to either of them in terms of unexpected death, critical illness and disability.
+En passant par le processus d’obtention d’un approbation hypothécaire, ils ont magasiné dans quelques banques et maisons de courtage hypothécaire pour les taux. Le spécialiste en prêts hypothécaires de la banque leur a parlé de l’assurance prêt hypothécaire (SCHL), s’ils mettent moins de 20% en mise de fonds. Ensuite, le spécialiste leur a offert l’assurance hypothécaire de la banque pour la balance impayée de l'hypothèque en cas de décès imprévu, de maladie grave et d'invalidité.
 
-They were very confused.
+Ils étaient très confus.
 
-When they spoke to the mortgage broker. They were able to offer a better rate on the mortgage and better service in terms of walking them through the different steps in their first home purchase. This clarified the 3 different types of insurances that are involved in the purchase of a property.
+Ils ont d’abord parlé avec un courtier en hypothèques. Il a pu offrir un meilleur taux hypothécaire et un meilleur service en les guidant à travers les différentes étapes dans l’achat de leur première maison. Cela a clarifié les 3 différents types d’assurances impliqués dans l’achat d’une propriété.
 
-Mortgage default insurance (CMHC): Required by all financial institutions in Canada for mortgage loans with less than 20% down payment. To protect the Canadian economy from a mortgage crisis should people default on their mortgage payments.
+Assurance prêt hypothécaire (SCHL): Exigée par toutes institutions financières au Canada pour les prêts hypothécaires avec une mise de fonds de moins de 20%. Ceci protège l'économie canadienne d’une crise hypothécaire en cas de défaut de paiement des prêts hypothécaires.
 
-“Home Insurance” : this is required by the notary when signing for the mortgage. Proof of insurance is mandatory. This is fire, theft, vandalism and liability insurance should anything happen to physical property and its contents.
+«Assurance habitation» : elle est exigée par le notaire lors de la signature de l'hypothèque. Une preuve d’assurance est obligatoire. Il s’agit d’assurance contre l’incendie, le vol, le vandalisme, et la responsabilité civile s’il y arrive quelque chose à la propriété physique et son contenu. 
 
-“Mortgage insurance” relates to protecting the individual owners of the property and the liability they have taken on in the form of a mortgage to be able to purchase the property.
-Banks offer this in house coverage that is more similar to credit protection that basically protects the creditor (the bank) more than the clients taking the mortgage.
+L’assurance hypothécaire» : Il vise à protéger les propriétaires de la propriété et la responsabilité qu’ils ont assumée sous forme de prêt hypothécaire pour pouvoir acheter la propriété. Les banques offrent cette couverture qui ressemble plus à une protection de crédit qui protège le créancier (la banque) plus que les clients qui contractent l'hypothèque. 
 
-The mortgage broker went on to explain that getting personal insurance is a much better option. And they should explore this with a professional.
+Le courtier en hypothèques a ensuite expliqué que l’assurance personnelle est une bien meilleure option qu’ils devraient explorer avec un professionnel. Il les ont référés à un conseiller en sécurité financière pour discuter de la façon dont l’assurance personnelle pour protéger l'hypothèque est beaucoup plus complète et adaptée à votre situation financière globale. 
 
-The mortgage broker then referred them to a financial security advisor to discuss how personally owned insurance to protect the mortgage is much more comprehensive and tailored to your overall financial situation.
+Jack et Jill ont rencontré un conseiller en sécurité financière qui a expliqué en détail la différence entre une assurance hypothécaire bancaire et une assurance personnelle. Ils ont vu la valeur dans l’image complète. Après une réunion de découverte, le conseiller en sécurité financière a fait des recommandations qui leur ont permis de garder l’esprit tranquille avec leur récent investissement. Sachant qu’ils sont tous deux entièrement couverts en cas de problèmes et de leur capacité à payer leur prêt hypothécaire.  
 
-Jack and Jill  met with a financial security advisor who went into detail about the difference between bank mortgage insurance and personally owed insurance and at the same time they saw the value in the big picture. After a discovery meeting, the financial security advisor made some solid recommendations that gave them piece of mind with their recent investment. Knowing they are both fully covered should anything happen to them and their ability to pay their mortgage.
-
-Finally they decided to invest in the proposed recommendation from the financial security advisor recommended by their mortgage broker.
-
-Term life insurance guaranteed for 25 years for the balance of their mortgage
-Term critical illness insurance  guaranteed for 25 years for the balance of their mortgage
-
-Which came out to less per month than what they spend on car insurance!"
+Finalement, ils ont décidé d’investir dans la recommandation proposée par leur conseiller en sécurité financière recommandé par leur courtier hypothécaire. Ils ont investi dans l’assurance vie temporaire et l’assurance maladies graves, les deux garanties pendant 25 ans pour le solde de leur prêt hypothécaire. Le tout leur coûtait moins par mois que leur assurance automobile!"
 ---

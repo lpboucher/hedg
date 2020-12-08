@@ -1,29 +1,29 @@
 ---
 isActive: true
-anchor: "What is mortgage Insurance?"
+anchor: "Qu’est-ce qu’une assurance hypothécaire?"
 anchorId: "what-is"
 inNavbar: false
 inFooter: true
-header: "What is mortgage insurance?"
-subheader: "Often referred to as \"mortgage insurance\" by banks and other financial institutions, it can often be misconstrued."
-subheaderFocus: "The mortgage insurance solutions that we offer are personally owned by YOU."
+header: "Qu’est-ce qu’une assurance hypothécaire?"
+subheader: "Souvent qualifiée d'«assurance hypothécaire» par les banques et autres institutions financières, elle peut souvent être mal interprétée."
+subheaderFocus: "Les solutions d’assurance hypothécaire que nous offrons vous appartiennent personnellement."
 descriptions: [
   {
-    label: "You own the policy (not the bank)",
+    label: "Vous êtes propriétaire du contrat (pas la banque)",
     image: "step1whatis.svg",
   },
   {
-    label: "You choose the beneficiary (your loved ones, not the bank)",
+    label: "Vous choisissez les bénéficiaires (vos proches, pas la banque)",
     image: "step2whatis.svg",
   },
   {
-    label: "You choose the terms and the benefit (not linked to the mortgage or the financial institution)",
+    label: "Vous choisissez les modalités et la prestation (non liés à l'hypothèque ou l’institution financière)",
     image: "step3whatis.svg",
   },
   {
-    label: "The price and benefit amount chosen is fixed for the terms that are right for your family.",
+    label: "Le prix et le montant de la prestation choisi sont fixes pour les termes qui conviennent à votre famille",
     image: "step4whatis.svg",
   },
 ]
-closer: "Separate from your actual mortgage, the purpose of the insurance is to cover your mortgage. But we go above and beyond that with our holistic approach to financial security planning. We look at your entire personal and corporate financial situation to ensure we are recommending the proper amount of insurance for you and yours."
+closer: "Indépendant de votre hypothèque, l’objectif de cette assurance est de couvrir votre hypothèque. Nous allons au-delà de cela avec notre approche holistique à la planification de la sécurité financière. Nous examinons l’ensemble de votre situation financière personnelle et d’entreprise pour nous assurer que nous vous recommandons le montant d’assurance approprié pour vous et vos proches."
 ---

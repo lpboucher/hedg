@@ -1,7 +1,9 @@
 ---
-header: "A tailored solution to your mortgage insurance."
-subheader: "We believe everyone is a different, therefore your financial plan should be built around you and your family’s goals and dreams. Protecting our clients financial future is our #1 priority."
+header: "Une solution sur mesure pour votre assurance hypothécaire."
+subheader: "Nous croyons que tout le monde est différent. Par conséquent, votre plan financier doit être construit autour de vous et des objectifs et des rêves de votre famille. Protéger l'avenir financier de nos clients est notre priorité n° 1."
 imageFileName: "HeroImage.svg"
 jumpToAnchor: "services"
-jumpToAnchorText: "Get started"
+jumpToAnchorText: "Commencez"
+referCta: "Nous Référer"
+appointmentCta: "Prenez Rendez-vous"
 ---

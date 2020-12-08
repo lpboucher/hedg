@@ -1,6 +1,6 @@
 ---
 isActive: false
-anchor: "Testimonials"
+anchor: "Témoignages"
 anchorId: "testimonials"
 inNavbar: false
 inFooter: true

@@ -1,10 +1,10 @@
 ---
 isActive: true
-anchor: "Our partners"
+anchor: "Nos partenaires"
 anchorId: "partners"
 inNavbar: false
 inFooter: false
-header: "Our partners"
+header: "Nos partenaires"
 partners: [
   {
     logo: "BlueCross.png",

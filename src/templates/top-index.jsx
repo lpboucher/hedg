@@ -37,17 +37,20 @@ export const query = graphql`
           address
           anchor
           anchorId
+          appointmentCta
           brandLogo
           brandName
           closer
           content
           copyright
+          cta
           cta1
           cta2
           descriptions {
             label
             image
           }
+          email
           explainer
           header
           imageFileName
@@ -57,11 +60,14 @@ export const query = graphql`
           jumpToAnchor
           jumpToAnchorText
           menuText
+          name
+          number
           partners {
             logo
             name
           }
           phone
+          referCta
           services {
             content
             header
@@ -113,8 +119,8 @@ const IndexPage = ({ data, pathContext: { langKey, defaultLang, langTextMap } })
     langSelectorPart = (
       <>
         <LanguageSelector langKey={langKey} defaultLang={defaultLang} langTextMap={langTextMap} />
-        <ScrollToButton spaced target="/refer" jumpToAnchorText="Refer Us" color="primary" />
-        <ScrollToButton spaced jumpToAnchor="contact" jumpToAnchorText="Book an appointment" color="success" />
+        <ScrollToButton spaced target="/refer" jumpToAnchorText={topNode.frontmatter.referCta} color="primary" />
+        <ScrollToButton spaced jumpToAnchor="contact" jumpToAnchorText={topNode.frontmatter.appointmentCta} color="success" />
       </>
     );
   }

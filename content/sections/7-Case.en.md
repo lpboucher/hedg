@@ -11,7 +11,7 @@ content: "Jack (29) & Jill (28) Have been dating for 2 years and wanted to move 
 
 While going through the process of getting a mortgage approval they shopped around at a couple banks and a mortgage brokerage for rates.
 The bank mortgage specialist spoke to them about default mortgage insurance (CMHC), should they put less than 20% down payment.
-Then they were offered their in house mortgage insurance on the outstanding balance of the mortgage should anything happen to either of them in terms of unexpected death, critical illness and disability.
+Then they were offered their in-house mortgage insurance on the outstanding balance of the mortgage should anything happen to either of them in terms of unexpected death, critical illness and disability.
 
 They were very confused.
 

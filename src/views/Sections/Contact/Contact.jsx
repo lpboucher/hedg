@@ -60,7 +60,7 @@ const Contact = ({ className, frontmatter }) => {
     }
   };
 
-  const { anchorId, header, subheader, imageFileName } = frontmatter;
+  const { anchorId, header, subheader, imageFileName, name, number, cta, email } = frontmatter;
 
   return (
     <PageSection className={className} id={anchorId}>
@@ -84,7 +84,7 @@ const Contact = ({ className, frontmatter }) => {
               <input name="bot-field" onChange={handleChange} />
             </Form.Label>
             <Form.Group as={Col} controlId="name-input" className="border-bottom border-primary my-5">
-              <Form.Label className="name-input" >First Name & Last Name:</Form.Label>
+              <Form.Label className="name-input" >{name}</Form.Label>
               <Form.Control
                 required
                 type="text"
@@ -94,7 +94,7 @@ const Contact = ({ className, frontmatter }) => {
               />
             </Form.Group>
             <Form.Group as={Col} controlId="phone-input" className="border-bottom border-primary my-5">
-              <Form.Label className="phone-input">Phone number:</Form.Label>
+              <Form.Label className="phone-input">{number}</Form.Label>
               <Form.Control
                 required
                 type="text"
@@ -105,7 +105,7 @@ const Contact = ({ className, frontmatter }) => {
               />
             </Form.Group>
             <Form.Group as={Col} controlId="email-input" className="border-bottom border-primary my-5">
-              <Form.Label className="email-input">Email address:</Form.Label>
+              <Form.Label className="email-input">{email}</Form.Label>
               <Form.Control
                 required
                 type="email"
@@ -119,7 +119,7 @@ const Contact = ({ className, frontmatter }) => {
                 {message}
               </Form.Text>
             }
-            <Button type="submit" size="xl" variant="secondary" className="btn-rounded font-weight-bold">Submit</Button>
+            <Button type="submit" size="xl" variant="secondary" className="btn-rounded font-weight-bold">{cta}</Button>
           </Form>
         </Col>
       </Row>

@@ -1,9 +1,13 @@
 ---
 isActive: true
-anchor: "Book an appointment"
+anchor: "Prenez rendez-vous"
 anchorId: "contact"
 inNavbar: false
 inFooter: true
-header: "Book an appointment with one of our advisor"
+header: "Prenez rendez-vous avec l’un de nos conseillers"
+name: "Prénom et Nom:"
+number: "Numéro de téléphone:"
+email: "Courriel:"
+cta: "Soumettre"
 imageFileName: "Calendar.svg"
 ---
