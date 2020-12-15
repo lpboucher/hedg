@@ -13,6 +13,7 @@ import ScrollToButton from "components/ScrollToButton";
 import "utils/fixFontAwesome";
 import breakDownAllNodes from "utils/breakDownAllNodes";
 import fileNameToSectionName from "utils/fileNameToSectionName";
+import getBaseUrl from "utils/getBaseUrl";
 
 import "../style/main.scss";
 import "../style/olivo.css";
@@ -119,7 +120,7 @@ const IndexPage = ({ data, pathContext: { langKey, defaultLang, langTextMap } })
     langSelectorPart = (
       <>
         <LanguageSelector langKey={langKey} defaultLang={defaultLang} langTextMap={langTextMap} />
-        <ScrollToButton spaced target="/refer" jumpToAnchorText={topNode.frontmatter.referCta} color="primary" />
+        <ScrollToButton spaced target={`${getBaseUrl(defaultLang, langKey)}refer`} jumpToAnchorText={topNode.frontmatter.referCta} color="primary" />
         <ScrollToButton spaced jumpToAnchor="contact" jumpToAnchorText={topNode.frontmatter.appointmentCta} color="success" />
       </>
     );
@@ -147,6 +148,7 @@ const IndexPage = ({ data, pathContext: { langKey, defaultLang, langTextMap } })
         frontmatter={navBarNode.frontmatter}
         extraItems={langSelectorPart}
         location={location}
+        language={langKey}
       />
       <Top frontmatter={topNode.frontmatter} />
       {

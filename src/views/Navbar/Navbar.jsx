@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { navigate } from "gatsby";
+import getBaseUrl from "utils/getBaseUrl";
 
 import clsx from "clsx";
 
@@ -11,10 +12,11 @@ import useSmoothScrollTo from "hooks/useSmoothScrollTo";
 import Icon from "components/Icon";
 import Image from "components/Image";
 import NavItem from "components/NavItem";
+import { defaultLang } from "../../../config/site";
 
 import "./Navbar.scss";
 
-const MyNavbar = ({ location, anchors, frontmatter, extraItems }) => {
+const MyNavbar = ({ language, location, anchors, frontmatter, extraItems }) => {
   const { brandLogo, brandName, menuText } = frontmatter;
 
   const handleScrollToTop = useSmoothScrollTo(0);
@@ -31,9 +33,9 @@ const MyNavbar = ({ location, anchors, frontmatter, extraItems }) => {
     if (location === "/") {
       handleScrollToTop()
     } else {
-      navigate("/")
+      navigate(`${getBaseUrl(defaultLang, language)}`)
     };
-  }, [location, closeMenu, handleScrollToTop]);
+  }, [language, location, closeMenu, handleScrollToTop]);
 
   const [shrink, setShrink] = React.useState(false);
   const handleWindowScroll = React.useCallback(() => {
@@ -78,6 +80,7 @@ MyNavbar.propTypes = {
   frontmatter: PropTypes.object,
   extraItems: PropTypes.any,
   location: PropTypes.string,
+  language: PropTypes.string,
 };
 
 MyNavbar.defaultProps = {
@@ -85,6 +88,7 @@ MyNavbar.defaultProps = {
   frontmatter: {},
   extraItems: null,
   location: "/",
+  language: "en",
 };
 
 export default MyNavbar;

@@ -114,6 +114,7 @@ const ReferPage = ({ data, pathContext: { langKey, defaultLang, langTextMap } })
         frontmatter={navBarNode.frontmatter}
         extraItems={langSelectorPart}
         location={location}
+        language={langKey}
       />
       <Jumbotron fluid className="px-3 mb-0 bg-light">
         <Container>
@@ -122,7 +123,7 @@ const ReferPage = ({ data, pathContext: { langKey, defaultLang, langTextMap } })
               <Image className="image" fileName={imageFileName} alt={header || subheader} />
             </Col>
             <Col md={6} sm={12} className="py-5 px-0 justify-content-around">
-              <ZohoForm />
+              <ZohoForm language={langKey} />
             </Col>
           </Row>
         </Container>
