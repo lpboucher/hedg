@@ -2,6 +2,15 @@
   .section-heading {
     margin-bottom: 10px;
   }
+
+  .gatsby-image-wrapper {
+    height: 100%;
+    width: 100%;
+
+    img {
+      object-fit: contain;
+    }
+  }
 }
 
 .partner-slider {
