@@ -659,7 +659,7 @@ const zohoStringFR = `
  <input type='hidden' name='zc_gad' id='zc_gad' value=''></input> 
  <input type='text' style='display:none;' name='xmIwtLD' value='1f76f2aed5ba4fcb9d24a9bf427b4c846260ad0b43d8c0a1181e6115c55699f9'></input> 
  <input type='text'  style='display:none;' name='actionType' value='TGVhZHM='></input>
- <input type='text' style='display:none;' name='returnURL' value='https://www.hedg.ca./' > </input><br></br>
+ <input type='text' style='display:none;' name='returnURL' value='https://www.hedg.ca/fr' > </input><br></br>
 	 <!-- Do not remove this code. -->
 	<style>
 		#crmWebToEntityForm tr , #crmWebToEntityForm td { 
@@ -1288,20 +1288,20 @@ const zohoStringFR = `
 </div>`
 
 const ZohoForm = ({ language }) => {
-  const htmlString = language === 'fr' ? zohoStringFR : zohoStringEN;
-  return (
-    <>
-      <div dangerouslySetInnerHTML={{ __html: htmlString }} />
-    </>
-  );
+    const htmlString = language === 'fr' ? zohoStringFR : zohoStringEN;
+    return (
+        <>
+            <div dangerouslySetInnerHTML={{ __html: htmlString }} />
+        </>
+    );
 };
 
 ZohoForm.propTypes = {
-  language: PropTypes.string,
+    language: PropTypes.string,
 };
 
 ZohoForm.defaultProps = {
-  language: 'en',
+    language: 'en',
 };
 
 export default ZohoForm;
